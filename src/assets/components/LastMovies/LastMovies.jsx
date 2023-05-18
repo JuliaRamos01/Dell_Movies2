@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import * as S from "./LastMoviesStyle";
 import axios from "axios";
+import Slider from "react-slick";
+
 
 export default function LastMovies(){
     const [lastMovies, setLastMovies] = useState([])
@@ -21,17 +23,26 @@ export default function LastMovies(){
             setLastMovies(allApi)
         })
     }
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 2,
+        slidesToScroll: 1
+      };
 
-    
     return(
         <S.LastMoviesMain>
+            <h1>Últimos Lançamentos</h1>
             {lastMovies.map((item)=>(
                 <S.BoxLastMovies>
+                    <Slider {...settings}> {/* problema no slider */}
                     <img src={item.image} alt={item.title}/>
                     <h2>{item.title}</h2>
-                    <h3>{item.release_date}</h3> {/* parei aqui */}
+                    <h3>{item.release_date}</h3> 
+                    </Slider>
                 </S.BoxLastMovies>
             ))}
         </S.LastMoviesMain>
     );
-}
+    }
