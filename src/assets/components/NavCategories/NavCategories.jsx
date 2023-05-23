@@ -15,6 +15,10 @@ export default function NavCategories(){
                 <li>Família</li>
                 <img src={Lupa} alt="Lupa"/>
             </ul>
+            <SearchInput />
         </S.NavCategories>
     );
+}
+const SearchInput = () =>{
+    return <S.Input placeholder="Pesquisar..." />
 }

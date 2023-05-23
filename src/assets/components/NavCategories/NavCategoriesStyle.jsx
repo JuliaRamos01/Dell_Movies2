@@ -37,3 +37,11 @@ img{
     padding-top: 5px; /* detalhe para descer a lupa, rever depois */
 }
 `;
+
+export const Input = styled.input`
+    width: 20%;
+    height: 5vh;
+    border-radius: 20px;
+    padding-left: 1rem;
+    border: none;
+`;

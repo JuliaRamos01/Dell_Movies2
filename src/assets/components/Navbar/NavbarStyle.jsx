@@ -88,3 +88,40 @@ li{
     }
 }
 `;
+
+export const DropdownMenu = styled.div`
+    display: ${(props) => props.modo};
+    position: absolute;
+    top: 100%;
+    right: 1px;
+    background-color: #000000;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    z-index: 1;
+
+    h3{
+        padding-left: 0.6rem;
+        &:hover{
+            color: white;
+        }
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    input{
+        width: 15vw;
+        height: 5vh;
+        border-radius: 30px;
+        padding-left: 1rem;
+    }
+    button{
+        width: 7vw;
+        height: 4vh;
+        background-color: #747474;
+        border-radius: 30px;
+        color: white;
+    }
+`;

@@ -27,22 +27,25 @@ export default function LastMovies(){
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 2,
-        slidesToScroll: 1
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        adaptiveWidth: true,
       };
 
     return(
         <S.LastMoviesMain>
+            <S.Title>
             <h1>Últimos Lançamentos</h1>
+            </S.Title>
+            <Slider {...settings} style={{  width: '90%', height:'50vh',}}>
             {lastMovies.map((item)=>(
-                <S.BoxLastMovies>
-                    <Slider {...settings}> {/* problema no slider */}
+                <S.BoxLastMovies key={item.id}>
                     <img src={item.image} alt={item.title}/>
                     <h2>{item.title}</h2>
                     <h3>{item.release_date}</h3> 
-                    </Slider>
                 </S.BoxLastMovies>
             ))}
+            </Slider>
         </S.LastMoviesMain>
     );
     }
