@@ -23,8 +23,10 @@ h1{
 
 export const BoxLastMovies = styled.div`
 /* border: red 2px solid; */
+display: flex;
+align-items: center;
 img{
-    width: 70%;
+    width: 80%;
     /* border: pink 2px solid; */
 }
 h2{

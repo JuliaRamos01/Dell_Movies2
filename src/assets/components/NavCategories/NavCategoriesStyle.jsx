@@ -39,6 +39,7 @@ img{
 `;
 
 export const Input = styled.input`
+    display: ${(props) => props.modo};
     width: 20%;
     height: 5vh;
     border-radius: 20px;

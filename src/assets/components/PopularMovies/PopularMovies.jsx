@@ -26,7 +26,7 @@ export default function LastMovies(){
             <h1>Em Alta</h1>
             <S.PopularBox>
             {popularMovies.map((item)=>(
-                <S.BoxPopularMovies>
+                <S.BoxPopularMovies key={item.id}>
                     <img src={item.image} alt={item.title}/>
                     <h2>{item.title}</h2>
                     <h3>{item.release_date}</h3> 

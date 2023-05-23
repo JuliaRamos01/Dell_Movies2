@@ -24,6 +24,7 @@ button{
     height: 8vh;
     border: white 1px solid;
     border-radius: 100px;
+    cursor: pointer;
     &:hover{
         background-color: white;
         color: #000000;
@@ -52,6 +53,7 @@ border: white 1px solid;
 width: 7vw;
 height: 8vh;
 border-radius: 10px;
+cursor: pointer;
 &:hover{
     background-color: white;
     color: #000000;

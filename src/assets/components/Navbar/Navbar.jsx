@@ -5,6 +5,7 @@ import Lupa from "../images/iconlupa.png";
 
 export default function Navbar() {
     const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [inputOpen, setInputOpen] = useState(false);
 
     return (
         <S.NavMain>
@@ -19,24 +20,27 @@ export default function Navbar() {
             </S.NavChoices>
             <S.NavLinks>
                 <ul>
-                    <li><img src={Lupa} alt="Search" /></li>
+                    <img src={Lupa} alt="Lupa" onClick={() => { setInputOpen(!inputOpen) }}/>
+                    <S.Input placeholder="Pesquisar..." modo={inputOpen === false ? "none" : "initial"}/>
                     <li>Filtro</li>
                     <li onClick={() => { setDropdownOpen(!dropdownOpen) }}>Login
                         <S.DropdownMenu modo={dropdownOpen === false ? "none" : "initial"}>
+                            <S.MenuBox>
                             <form>
                                 <h3>Login</h3>
                                 <input type="email" placeholder="Digite seu email" />
                                 <input type="password" placeholder="Digite sua senha" />
-                                <div>
+                                <S.DivLabel>
                                     <input type="checkbox" id="remember-me" />
-                                    <label>Relembrar</label>
-                                </div>
+                                    <p>Manter conectado</p>
+                                </S.DivLabel>
                                 <button>Entrar</button>
-                                <div>
+                                <S.Links>
                                     <a href="#">Esqueci minha senha</a>
                                     <a href="#">Criar conta</a>
-                                </div>
+                                </S.Links>
                             </form>
+                            </S.MenuBox>
                         </S.DropdownMenu>
                     </li>
                 </ul>

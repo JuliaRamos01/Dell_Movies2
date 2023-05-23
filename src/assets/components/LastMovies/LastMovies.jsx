@@ -37,10 +37,10 @@ export default function LastMovies(){
             <S.Title>
             <h1>Últimos Lançamentos</h1>
             </S.Title>
-            <Slider {...settings} style={{  width: '90%', height:'50vh',}}>
+            <Slider {...settings} style={{  width: '90%', height:'50vh'}}>
             {lastMovies.map((item)=>(
                 <S.BoxLastMovies key={item.id}>
-                    <img src={item.image} alt={item.title}/>
+                    <img src={item.image} alt={item.title} />
                     <h2>{item.title}</h2>
                     <h3>{item.release_date}</h3> 
                 </S.BoxLastMovies>

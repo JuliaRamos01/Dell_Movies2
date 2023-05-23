@@ -1,7 +1,11 @@
+import { useState } from "react";
 import * as S from "./NavCategoriesStyle";
 import Lupa from "../images/iconlupa.png";
 
 export default function NavCategories(){
+
+    const [inputOpen, setInputOpen] = useState(false);
+
     return(
         <S.NavCategories>
             <ul>
@@ -13,12 +17,9 @@ export default function NavCategories(){
                 <li>Crime</li>
                 <li>Fantasia</li>
                 <li>Família</li>
-                <img src={Lupa} alt="Lupa"/>
+                <img src={Lupa} alt="Lupa" onClick={() => { setInputOpen(!inputOpen) }}/>
+                <S.Input placeholder="Pesquisar..." modo={inputOpen === false ? "none" : "initial"}/>
             </ul>
-            <SearchInput />
         </S.NavCategories>
     );
-}
-const SearchInput = () =>{
-    return <S.Input placeholder="Pesquisar..." />
 }
