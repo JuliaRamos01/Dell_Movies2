@@ -1,4 +1,4 @@
-# Website - Portifólio
+# Website - Dell Movies
 
 <p>💻 Projeto Final do curso Vai na Web</p>
 
@@ -6,7 +6,7 @@
   <img src="./src/assets/components/images/dellmovies.png">
 </h1>
 
-## Infos
+## Informações
 
 - Feito em React Js;
 - Design responsivo;
