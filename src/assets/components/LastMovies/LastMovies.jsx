@@ -66,9 +66,11 @@ export default function LastMovies(){
             <Slider {...settings} style={{  width: '90%', height:'50vh'}}>
             {lastMovies.map((item)=>(
                 <S.BoxLastMovies key={item.id}>
+                  <S.Box>
                     <img src={item.image} alt={item.title} />
                     <h2>{item.title}</h2>
                     <h3>{item.release_date}</h3> 
+                  </S.Box>
                 </S.BoxLastMovies>
             ))}
             </Slider>

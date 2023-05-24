@@ -29,11 +29,21 @@ h1{
 `;
 
 export const BoxLastMovies = styled.div`
-border: red 2px solid;
+/* border: red 2px solid; */
 display: flex;
-align-items: center;
 @media (min-width: 350px) and (max-width: 500px){
-    width: 50%;
+    width: 30%;
+}
+`;
+
+export const Box = styled.div`
+/* border: blue 2px solid; */
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+@media (min-width: 350px) and (max-width: 500px){
+    width: 100%;
     display: flex;
     /* text-align: center; (essa propriedade funciona)*/
 }
