@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const NavMain =  styled.div`
+export const NavMain = styled.div`
 background-color: rgba(0,0,0,1/1) ;
 backdrop-filter: blur(15px);
 /* border: red 2px solid; */
@@ -13,6 +13,9 @@ width: 100%;
 padding-left: 1.5rem;
 padding-right: 1.5rem;
 z-index: 1;
+@media (min-width: 350px) and (max-width: 500px){
+    height: 9vh;
+}
 `;
 
 export const Image = styled.div`
@@ -21,20 +24,29 @@ width: 10vw;
 height: 7vh;
 img{
     width: 8vw;
+    @media (min-width: 350px) and (max-width: 500px){
+    width: 20vw;
+}
 }
 `;
 
-export const NavChoices =  styled.div`
+export const NavChoices = styled.div`
 /* border: green 2px solid; */
 width: 40vw;
 display: flex;
 justify-content: flex-end;
+@media (min-width: 350px) and (max-width: 500px){
+    width: 45vw;
+}
 
 ul{
     width: 17vw;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    @media (min-width: 350px) and (max-width: 500px){
+    width: 30vw;
+}
 }
 
 li{
@@ -43,7 +55,9 @@ li{
     font-size: 1rem;
     font-family: 'Open Sans', sans-serif;
     font-weight: 200;
-    cursor: pointer;
+    cursor: pointer;@media (min-width: 350px) and (max-width: 500px){
+        font-size: 0.8rem;
+    }
 }
 
 button{
@@ -58,19 +72,30 @@ button{
     font-family: 'Open Sans', sans-serif;
     font-weight: 200;
     cursor: pointer;
+    @media (min-width: 350px) and (max-width: 500px){
+    width: 15vw;
+    height: 6vh;
+    font-size: 0.8rem;
+}
 }
 `;
 
-export const NavLinks =  styled.div`
+export const NavLinks = styled.div`
 /* border: blue 2px solid; */
 width: 30vw;
 height: 5vh;
 display: flex;
 align-items: center;
 justify-content: space-evenly;
+@media (min-width: 350px) and (max-width: 500px){
+        width: 17vw;
+    }
 img{
     padding-top: 10px; /* detalhe para descer a lupa, rever depois */
     width: 3vw;
+    @media (min-width: 350px) and (max-width: 500px){
+        display: none;
+    }
 }
 ul{
     width: 30vw;
@@ -85,6 +110,9 @@ li{
     font-family: 'Open Sans', sans-serif;
     font-weight: 200;
     cursor: pointer;
+    @media (min-width: 350px) and (max-width: 500px){
+        font-size: 0.8rem;
+    }
 }
 `;
 
@@ -100,6 +128,9 @@ export const DropdownMenu = styled.div`
     border: 1px solid #ccc;
     border-radius: 4px;
     z-index: 1;
+    @media (min-width: 350px) and (max-width: 500px){
+    width: 40vw;
+}
 
     h3{
         padding-left: 0.6rem;
@@ -115,6 +146,9 @@ export const DropdownMenu = styled.div`
         height: 5vh;
         border-radius: 30px;
         padding-left: 1rem;
+        @media (min-width: 350px) and (max-width: 500px){
+        width: 35vw;
+}
     }
     button{
         width: 7vw;
@@ -124,6 +158,9 @@ export const DropdownMenu = styled.div`
         border: none;
         color: white;
         cursor: pointer;
+        @media (min-width: 350px) and (max-width: 500px){
+        width: 15vw;
+        }
     }
 `;
 
@@ -157,6 +194,9 @@ a{
     font-family: 'Open Sans', sans-serif;
     font-size: 0.8rem;
     color: white;
+    @media (min-width: 350px) and (max-width: 500px){
+    font-size: 0.6rem;
+}
 }
 `;
 
@@ -167,6 +207,9 @@ export const Input = styled.input`
     border-radius: 20px;
     padding-left: 1rem;
     border: none;
+    @media (min-width: 350px) and (max-width: 500px){
+        display: none;
+    }
 `;
 
 

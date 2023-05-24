@@ -16,6 +16,9 @@ height: 12vh;
 display: flex;
 justify-content: space-evenly;
 align-items: center;
+@media (min-width: 350px) and (max-width: 500px){
+    width: 90vw;
+}
 button{
     color: white;
     font-size: 1rem;
@@ -25,6 +28,11 @@ button{
     border: white 1px solid;
     border-radius: 100px;
     cursor: pointer;
+    @media (min-width: 350px) and (max-width: 500px){
+    width: 6vw;
+    height: 5vh;
+    font-size: 0.7rem;
+}
     &:hover{
         background-color: white;
         color: #000000;
@@ -37,6 +45,10 @@ p{
     height: 8vh;
     color: white;
     font-size: 2rem;
+    @media (min-width: 350px) and (max-width: 500px){
+    font-size: 1rem;
+    height: 5vh;
+}
 }
 `;
 
@@ -54,6 +66,11 @@ width: 7vw;
 height: 8vh;
 border-radius: 10px;
 cursor: pointer;
+@media (min-width: 350px) and (max-width: 500px){
+    width: 13vw;
+    height: 6vh;
+    font-size: 0.8rem;
+}
 &:hover{
     background-color: white;
     color: #000000;
